@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Changed from "uz" to "en" -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>О нас | GreenInvest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fff9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      border-bottom: 3px solid #2ecc71;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      height: 36px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2ecc71;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #1f5fcc;
+      font-weight: 600;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .navbar ul li a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: #2ecc71;
+      width: 0;
+      transition: 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    .navbar ul li a:hover::after {
+      width: 100%;
+    }
+
+    .language-bar {
+      background-color: #e7f6ee;
+      padding: 10px 40px;
+      text-align: right;
+      font-size: 14px;
+      border-bottom: 2px solid #2ecc71;
+    }
+
+    .language-bar span {
+      margin-right: 10px;
+      font-weight: 500;
+      color: #128f76;
+    }
+
+    .lang-btn {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #1f5fcc;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .lang-btn:hover {
+      color: #2ecc71;
+    }
+
+    .section {
+      padding: 80px 40px;
+      max-width: 1000px;
+      margin: auto;
+      line-height: 1.8;
+      background: linear-gradient(to top left, #ffffff, #f0fff4);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .section h2 {
+      font-size: 36px;
+      color: #1f5fcc;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .section p {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .benefits {
+      margin-top: 40px;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .benefits h3 {
+      color: #128f76;
+      margin-bottom: 15px;
+    }
+
+    .benefits ul {
+      padding-left: 20px;
+    }
+
+    .benefits li {
+      margin-bottom: 12px;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.3s, transform 0.3s;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    .benefits li:hover {
+      background-color: #e7f6ee;
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .team-section {
+      padding: 80px 20px;
+      background: linear-gradient(to right, #f0fdf4, #ecfdf5);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .team-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .team-member {
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-member:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .team-member h4 {
+      margin: 10px 0 5px;
+      color: #1e40af;
+      font-size: 1.1rem;
+    }
+
+    .role {
+      font-size: 0.95rem;
+      color: #089981;
+      font-weight: 600;
+    }
+
+    .bio {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 10px 0 15px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .socials a {
+      color: #1f2937;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #089981;
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo-container">
+    <img src="logo.png" alt="GreenInvest Logo" class="logo-img">
+    <span class="logo-text">GreenInvest</span>
+  </div>
+  <ul>
+  <li><a href="indexru.html">Главная</a></li>
+<li><a href="projectru.html">Проекты</a></li>
+<li><a href="moneyru.html">Инвестиции</a></li>
+<li><a href="submitru.html">Предложить проект</a></li>
+<li><a href="aboutru.html">О нас</a></li>
+<li><a href="hubru.html">Центр знаний</a></li>
+<li><a href="contactru.html">Контакты</a></li>
+  </ul>
+</header>
+   <div class="language-bar">
+      <span>🌐 Выберите язык:</span>
+<a href="about.html" class="lang-btn">🇺🇿 Узбекский</a>
+<a href="abouten.html" class="lang-btn">🇬🇧 Английский</a>
+<a href="aboutru.html" class="lang-btn">🇷🇺 Русский</a>
+</div>
+<section class="section">
+  
+
+ <h2>🌱 О нас</h2>
+<p>GreenInvest — это инновационная платформа, направленная на обеспечение устойчивого будущего Узбекистана. Наша цель — соединять экологически чистые, экономически выгодные и социально значимые проекты с инвесторами.</p>
+<p>Команда GreenInvest работает с надежными партнерами и квалифицированными специалистами. Каждый проект тщательно анализируется и реализуется под контролем.</p>
+
+
+<ul>
+  <div class="benefits">
+   <h3>📌 Зачем мы создали эту платформу?</h3>
+<ul>
+  <li><i class="fas fa-leaf"></i> Содействовать охране окружающей среды.</li>
+  <li><i class="fas fa-plug"></i> Развивать и продвигать зеленые технологии.</li>
+  <li><i class="fas fa-handshake"></i> Соединять узбекские проекты с местными и международными инвесторами.</li>
+</ul>
+
+<h3>👤 Какие преимущества для граждан Узбекистана?</h3>
+<ul>
+  <li><i class="fas fa-solar-panel"></i> Возможность участвовать в проектах по зеленой энергии, экономии воды и переработке отходов.</li>
+  <li><i class="fas fa-briefcase"></i> Новые рабочие места и развитие местной инфраструктуры.</li>
+  <li><i class="fas fa-tree"></i> Создание чистой среды для жизни.</li>
+</ul>
+
+<h3>🌍 Какие преимущества для иностранных инвесторов?</h3>
+<ul>
+  <li><i class="fas fa-globe"></i> Инвестиционные возможности, направленные на устойчивое развитие.</li>
+  <li><i class="fas fa-chart-line"></i> Участие в проектах с высоким социальным воздействием.</li>
+  <li><i class="fas fa-award"></i> Повышение международной репутации за счет инвестиций в зеленую экономику.</li>
+</ul>
+
+<h3>💼 Обязанности и выгоды инвесторов</h3>
+<ul>
+  <li><i class="fas fa-percent"></i> Каждый инвестор получает определённый процент прибыли от проектов, реализованных через нашу платформу.</li>
+  <li><i class="fas fa-recycle"></i> Часть прибыли инвесторов направляется на восстановление окружающей среды.</li>
+  <li><i class="fas fa-seedling"></i> Это не только прибыль, но и вклад в решение экологических проблем.</li>
+</ul>
+    <div style="margin-top: 40px; text-align: center;">
+     
+<h3 style="margin-bottom: 15px;">📲 Подпишитесь на нас в соцсетях:</h3>
+      <div class="socials" style="font-size: 1.5rem; display: flex; justify-content: center; gap: 20px;">
+        <a href="https://t.me/yourchannel" target="_blank" title="Telegram"><i class="fab fa-telegram" style="color: #0088cc;"></i></a>
+        <a href="https://instagram.com/yourpage" target="_blank" title="Instagram"><i class="fab fa-instagram" style="color: #E4405F;"></i></a>
+        <a href="https://linkedin.com/yourcompany" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" style="color: #0077b5;"></i></a>
+        <a href="https://facebook.com/yourpage" target="_blank" title="Facebook"><i class="fab fa-facebook" style="color: #1877F2;"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="team-section">
+  <div class="container text-center">
+    <h2 class="section-title">Наша команда</h2>
+<p class="section-subtitle">Наша команда состоит из высококвалифицированных специалистов в области экологии и финансов.</p>
+
+    <div class="team-cards">
+
+      <div class="team-member">
+        <img src="krash.jpg" alt="Finance Specialist" />
+        <h4>Nurhayot Ko'charboyev</h4>
+        <p class="role">Основатель</p>
+<p class="bio">Разрабатывает стратегические решения в сфере зеленого финансирования и облигаций.</p>
+        <div class="socials">
+          <a href="#"><i class="fas fa-envelope"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

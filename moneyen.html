@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investment | GreenInvest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4fef4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      border-bottom: 3px solid #2ecc71;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      height: 36px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2ecc71;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      padding-left: 0;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #1f5fcc;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #2ecc71;
+    }
+
+    .language-bar {
+      background-color: #e7f6ee;
+      padding: 10px 40px;
+      text-align: right;
+      font-size: 14px;
+      border-bottom: 2px solid #2ecc71;
+    }
+
+    .language-bar span {
+      margin-right: 10px;
+      font-weight: 500;
+      color: #128f76;
+    }
+
+    .lang-btn {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #1f5fcc;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .lang-btn:hover {
+      color: #2ecc71;
+    }
+
+    .section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 40px auto 0;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    form button {
+      padding: 12px 20px;
+      background-color: #2ecc71;
+      border: none;
+      color: white;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background-color: #27ae60;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo-container">
+    <img src="logo.png" alt="GreenInvest Logo" class="logo-img">
+    <span class="logo-text">GreenInvest</span>
+  </div>
+  <ul>
+    <li><a href="indexen.html">Home</a></li>
+    <li><a href="projecten.html">Projects</a></li>
+    <li><a href="moneyen.html">Investment</a></li>
+    <li><a href="submiten.html">Submit Project</a></li>
+    <li><a href="abouten.html">About Us</a></li>
+    <li><a href="huben.html">Knowledge Hub</a></li>
+    <li><a href="contacten.html">Contact</a></li>
+  </ul>
+</header>
+
+<div class="language-bar">
+  <span>🌐 Select language:</span>
+  <a href="money.html" class="lang-btn">🇺🇿 Uzbek</a>
+  <a href="moneyen.html" class="lang-btn">🇬🇧 English</a>
+  <a href="moneyru.html" class="lang-btn">🇷🇺 Russian</a>
+</div>
+
+<section class="section">
+  <h2>📈 Why invest through us?</h2>
+  <p>With GreenInvest, you can invest in eco-friendly and sustainable projects. We offer you trustworthy projects that drive measurable impact and positive change.</p>
+  <p>Each project is evaluated and monitored by experts. We connect you with not only profitable, but also environmentally beneficial initiatives.</p>
+  <a href="projecten.html" class="lang-btn" style="background-color:#2ecc71; color:#fff; padding:10px 20px; border-radius:6px; display:inline-block; margin-top:20px;">🌱 View Projects</a>
+
+  <form>
+    <h3 style="color:#1f5fcc;">📋 Submit Your Investment Interest</h3>
+    <input type="text" placeholder="First Name" required>
+    <input type="text" placeholder="Last Name" required>
+    <select required>
+      <option value="">Select a project</option>
+      <option>Solar Panels – Nukus Schools</option>
+      <option>Wind Turbines – Jizzakh</option>
+      <option>Smart Irrigation – Bukhara</option>
+      <option>Eco Heating – Andijan</option>
+      <option>Green Building – Samarkand</option>
+      <option>Recycling – Tashkent</option>
+      <option>Bio Energy – Syrdarya</option>
+      <option>Electric Transport – Namangan</option>
+    </select>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="email" placeholder="Email Address" required>
+    <button type="submit">📨 Submit</button>
+    <p class="note">We will contact you within 2 business days.</p>
+  </form>
+</section>
+
+</body>
+</html>

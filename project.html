@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loyihalar | GreenInvest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4fef4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      border-bottom: 3px solid #2ecc71;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      height: 36px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2ecc71;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      padding-left: 0;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #1f5fcc;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #2ecc71;
+    }
+
+    .language-bar {
+      background-color: #e7f6ee;
+      padding: 10px 40px;
+      text-align: right;
+      font-size: 14px;
+      border-bottom: 2px solid #2ecc71;
+    }
+
+    .language-bar span {
+      margin-right: 10px;
+      font-weight: 500;
+      color: #128f76;
+    }
+
+    .lang-btn {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #1f5fcc;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .lang-btn:hover {
+      color: #2ecc71;
+    }
+
+    header.page-title {
+      background-color: #fff;
+      padding: 30px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #2ecc71;
+      border-bottom: 2px solid #2ecc71;
+    }
+
+    .section {
+      padding: 50px 40px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #1f5fcc;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .project-card h4 {
+      margin: 18px 15px 8px;
+      font-size: 20px;
+      color: #1f5fcc;
+    }
+
+    .project-card p {
+      margin: 0 15px 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo-container">
+    <img src="logo.png" alt="GreenInvest Logo" class="logo-img">
+    <span class="logo-text">GreenInvest</span>
+  </div>
+  <ul>
+    <li><a href="index.html">Bosh sahifa</a></li>
+    <li><a href="project.html">Loyihalar</a></li>
+    <li><a href="money.html">Investitsiya</a></li>
+    <li><a href="submit.html">Loyiha yuborish</a></li>
+    <li><a href="about.html">Biz haqimizda</a></li>
+    <li><a href="hub.html">Bilim markazi</a></li>
+    <li><a href="contact.html">Bog‘lanish</a></li>
+  </ul>
+</header>
+
+<div class="language-bar">
+  <span>🌐 Tilni tanlang:</span>
+  <a href="project.html" class="lang-btn">🇺🇿 O‘zbekcha</a>
+  <a href="projecten.html" class="lang-btn">🇬🇧 English</a>
+  <a href="projectru.html" class="lang-btn">🇷🇺 Русский</a>
+</div>
+
+<header class="page-title">🌿 GreenInvest loyihalari</header>
+
+<section class="section">
+  <h2>📂 Mavjud loyihalar</h2>
+  <div class="projects">
+    <a href="project-solar.html" class="project-card">
+      <img src="solar.jpg" alt="Quyosh paneli">
+      <h4>Quyosh panellari – Nukus maktablari</h4>
+      <p>Qoraqalpog‘iston</p>
+    </a>
+    <a href="project-wind.html" class="project-card">
+      <img src="wind.jpg" alt="Shamol turbinalari">
+      <h4>Shamol turbinalari – Jizzax</h4>
+      <p>Jizzax viloyati</p>
+    </a>
+    <a href="project-irrigation.html" class="project-card">
+      <img src="irrigation.png" alt="Aqlli sug‘orish">
+      <h4>Aqlli sug‘orish – Buxoro</h4>
+      <p>Buxoro viloyati</p>
+    </a>
+    <a href="project-heating.html" class="project-card">
+      <img src="heating.jpg" alt="Ekologik isitish">
+      <h4>Ekologik isitish – Andijon shifoxonalari</h4>
+      <p>Andijon viloyati</p>
+    </a>
+    <a href="project-eco-building.html" class="project-card">
+      <img src="gbuilding.jpg" alt="Yashil bino qurilishi">
+      <h4>Yashil bino qurilishi – Samarqand</h4>
+      <p>Samarqand viloyati</p>
+    </a>
+    <a href="project-recycle.html" class="project-card">
+      <img src="recycle.jpg" alt="Chiqindilarni qayta ishlash">
+      <h4>Chiqindilarni qayta ishlash – Toshkent</h4>
+      <p>Toshkent shahri</p>
+    </a>
+    <a href="project-bioenergy.html" class="project-card">
+      <img src="bfuel.jpg" alt="Biologik energiya ishlab chiqarish">
+      <h4>Biologik energiya – Sirdaryo</h4>
+      <p>Sirdaryo viloyati</p>
+    </a>
+    <a href="project-transport.html" class="project-card">
+      <img src="car.jpg" alt="Elektr transporti">
+      <h4>Elektr transporti – Namangan</h4>
+      <p>Namangan viloyati</p>
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
